@@ -3,6 +3,15 @@ const priorityInput = document.getElementById("priority");
 const deadlineInput = document.getElementById("deadline");
 const addTaskButton = document.getElementById("add-task");
 const taskList = document.getElementById("task-list");
+const noTasks = document.getElementById("no-tasks");
+
+const toggleNoTasksMessage = () => {
+  if (taskList.children.length === 0) {
+    noTasks.style.display = "flex";
+  } else {
+    noTasks.style.display = "none";
+  }
+};
 
 addTaskButton.addEventListener("click", () => {
   const task = taskInput.value;
@@ -35,6 +44,9 @@ addTaskButton.addEventListener("click", () => {
   taskInput.value = "";
   priorityInput.value = "top";
   deadlineInput.value = "";
+
+  toggleNoTasksMessage();
+
 });
 
 taskList.addEventListener("click", (event) => {
