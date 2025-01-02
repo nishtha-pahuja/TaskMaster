@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TaskMaster</title>
+</head>
+
+<body>
+    <!-- <header>
+        <h1>TaskMaster</h1>
+    </header> -->
+    <header>
+        <div class="header-content">
+            <!-- <h1>The best app you've ever seen</h1>
+            <p>You'll be blown away with all it does</p> -->
+            <h1>TaskMaster</h1>
+
+        </div>
+
+    </header>
+    <main>
+        <div class="task-form">
+            <input type="text" id="task" placeholder="Enter task...">
+            <select id="priority">
+                <option value="top">Top Priority</option>
+                <option value="middle">Middle Priority</option>
+                <option value="low">Less Priority</option>
+            </select>
+            <input type="date" id="deadline">
+            <button id="add-task">Add Task</button>
+        </div>
+        <div class="task-list" id="task-list">
+            <!-- Tasks will be added here dynamically -->
+        </div>
+        <script src="script.js"></script>
+    </main>
+    <center>
+        <h3>No Tasks</h3>
+        <img src="empty-animate.svg" alt="No Tasks" width="25%" />
+    </center>
+
+</body>
+
+</html>
